@@ -52,7 +52,7 @@ h1 {
 
 }
 /* nav */
-nav {
+header {
   padding: 10px;
   height: 40px;
   background-color: lightgray;
@@ -277,7 +277,7 @@ footer a {
   }
 
 
-  nav {
+  header {
     padding: 10px;
     height: 50px;
     background-color: lightgray;
