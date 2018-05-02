@@ -18,15 +18,8 @@
         <p>Coming Soon</h2>
       </div>
     </main>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/site.js"></script>
+    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/footer.php'?>
 
     </body>
-    <footer><p>Copyright Tammy Dresen 2018</p>
-      <ul>
-        <li ><a  href="home.html" class="button1">HOME</a></li>
-        <li ><a href="assignments.html" class="button2">ASSIGNMENTS</a></li>
-        <li ><a href="more.html" class="button3">MORE</a></li>
-      </ul>
-    </footer>
+
   </html>

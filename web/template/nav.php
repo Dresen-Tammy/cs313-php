@@ -6,7 +6,7 @@
   </div>
 </div>
     <ul id="buttons" class="buttons">
-      <li ><a  href="home.html" class="button1">HOME</a></li>
-      <li ><a href="assignments.html" class="button2">ASSIGNMENTS</a></li>
-      <li ><a href="more.html" class="button3">MORE</a></li>
+      <li ><a  href="home.php" class="button1">HOME</a></li>
+      <li ><a href="assignments.php" class="button2">ASSIGNMENTS</a></li>
+      <li ><a href="more.php" class="button3">MORE</a></li>
     </ul>
