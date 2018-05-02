@@ -6,7 +6,7 @@ html, body{
   font-family: "Open Sans", sans-serif;
   color: #015249;
   overflow-x: hidden;
-
+  height: 100%;
 }
 html {
   background:linear-gradient(to right, rgba(119, 210, 212, 1), rgba(87, 188, 144, 0.6)) ;
@@ -14,7 +14,7 @@ html {
 }
 body {
   position: relative;
-  height: 95%;
+
 }
 
 /* Fonts */
