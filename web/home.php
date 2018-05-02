@@ -22,7 +22,7 @@
     </div>
     <div class="right">
       <h2>Hi, I'm Tammy</h2>
-      <p>I’m a thinker and problem solver. Out of the box solutions are my specialty. I take 100 mile bike rides for fun. I’m a girl that doesn’t have any quit in me.</p>
+      <p>I’m a thinker and problem solver. I love to try new things. I take 100 mile bike rides for fun. I’m a girl that doesn’t have any quit in me.</p>
       <ul>
         <li>My favorite place is the beach</li>
       	<li>I hate being cold</li>
