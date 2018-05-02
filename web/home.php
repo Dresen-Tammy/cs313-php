@@ -4,14 +4,14 @@
 <html lang="en-us">
   <head>
     <title>Home page</title>
-    <?php include $_SERVER['DOCUMENT_ROOT'] .'/cs313-php/web/template/head.php'?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/head.php'?>
 
 </head>
   <body>
     <header class="nav">
-      <?php include $_SERVER['DOCUMENT_ROOT'] .'/cs313-php/web/template/header.php'?>
+      <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/header.php'?>
     </header>
-    <?php include $_SERVER['DOCUMENT_ROOT'] .'/cs313-php/web/template/nav.php'?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/nav.php'?>
 
     <main>
       <div class="left">
