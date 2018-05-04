@@ -4,14 +4,14 @@
 <html lang="en-us">
   <head>
     <title>Home page</title>
-    <?php include '/template/head.php'?>
+    <?php include '../template/head.php'?>
 
 </head>
   <body>
     <header class="nav">
-      <?php include '/template/header.php'?>
+      <?php include '../template/header.php'?>
     </header>
-    <?php include '/template/nav.php'?>
+    <?php include '../template/nav.php'?>
 
     <main>
       <div class="left">
@@ -35,7 +35,7 @@
       </ul>
     </div>
     </main>
-<?php include '/template/footer.php'?>
+<?php include 'template/footer.php'?>
 
   </body>
 </html>
