@@ -8,9 +8,9 @@
 </head>
   <body>
     <header class="nav">
-      <?php include '/template/header.php'?>
+      <?php include 'template/header.php'?>
     </header>
-    <?php include '/template/nav.php'?>
+    <?php include 'template/nav.php'?>
 
     <main>
       <div>
@@ -20,6 +20,6 @@
       </ul>
     </div>
     </main>
-    <?php include '/template/footer.php'?>
+    <?php include 'template/footer.php'?>
       </body>
     </html>
