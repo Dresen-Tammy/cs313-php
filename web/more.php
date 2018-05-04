@@ -3,14 +3,14 @@
 <html lang="en-us">
   <head>
     <title>Home page</title>
-    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/head.php'?>
+    <?php include '/template/head.php'?>
 
 </head>
   <body>
     <header class="nav">
-      <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/header.php'?>
+      <?php include '/template/header.php'?>
     </header>
-    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/nav.php'?>
+    <?php include '/template/nav.php'?>
 
     <main>
       <div>
@@ -18,7 +18,7 @@
         <p>Coming Soon</h2>
       </div>
     </main>
-    <?php include $_SERVER['DOCUMENT_ROOT'] .'/template/footer.php'?>
+    <?php include '/template/footer.php'?>
 
     </body>
 
