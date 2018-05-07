@@ -21,8 +21,8 @@ Clicking button will store item in session, return to browseItem page  -->
         <a  href="home.php" class="button1">CART</a>
       </header>
       <main>
-        <h2>Item 1</h2><input type="button" value="i1">
-        <h2>Item 2</h2><input type="button" value="i21">
+        <h2>Item 1</h2><input type="button" value="i1" name="Add To Cart">
+        <h2>Item 2</h2><input type="button" value="i2">
         <h2>Item 3</h2><input type="button" value="i3">
         <h2>Item 4</h2><input type="button" value="i4">
         <h2>Item 5</h2><input type="button" value="i5">
