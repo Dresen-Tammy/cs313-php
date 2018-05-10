@@ -17,15 +17,16 @@ if(isset($_SESSION['cart'])) {
 
 // list of items for sale on browseItems page
 $items = array(
-  "RU" => array("Specialized Ruby Bike 52cm Teal", 1299.99),
-  "RO" => array("Specialized Roubaix Bike 61cm Mint", 3099.00 ),
-  "CH" => array("Trek Checkpoint ALR Bike 48cm Blue", 1789.99),
-  "PR" => array("Giant Propel Advanced Bike 59cm Red", 3775.00 ),
-  "LA" => array("Lazer 02 Helmet Orange Sm", 89.96 ),
-  "PI" => array("Pearl Izumi Cycling Kit Sm", 89.95 ),
-  "SI" => array("Sidi Level Carbon Shoes Mens 8", 119.99 ),
-  "PR"=> array("Giant Propel Advanced 59cm Red", 3775.00 ),
-  "BG" => array("Specialized Body Geometry Gel Gloves Lg", 35.00 )
+  "RU" => array("Specialized Ruby Bike 52cm Teal", 1299.99, "images/ruby.png"),
+  "RO" => array("Specialized Roubaix Bike 61cm Mint", 3099.99, "images/roubaix.png" ),
+  "CH" => array("Trek Checkpoint ALR Bike 48cm Blue", 1789.99, "images/checkpoint.png"),
+  "PR" => array("Giant Propel Advanced Bike 59cm Blue", 3775.15, "images/giant.png" ),
+  "LA" => array("Lazer 02 Helmet Orange Sm", 89.96, "images/lazer.png" ),
+  "GI" => array("Giro Savant Helmet Red Lg", 49.97, "images/giro.png"),
+  "PI" => array("Pearl Izumi Cycling Kit Sm", 89.95, "images/pearl.png" ),
+  "CM"=> array("Sesame Street Cycling Jersey Md", 75.49, "images/cookie.png" ),
+  "SI" => array("Sidi Level Carbon Shoes Mens 8", 119.99, "images/sidi.png" ),
+  "BG" => array("Specialized Body Geometry Gel Gloves Lg", 35.59, "images/geometry.png" )
 );
 
 // get input on which page to display. If no input, display browse page.
@@ -55,10 +56,10 @@ switch ($action) {
       // create browse list for browseItem page
       $browseList = "<ul>";
       foreach ($items as $key => $value) {
-        $browseList .= "<li>$value[0] <span>\$$value[1]</span>
-        <a href='/cs313-php/web/shoppingCart/index.php?action=browse&item=$key'
+        $browseList .= "<li><span class='item'> $value[0] </span> <span class='price'>\$$value[1]</span>
+        <a href='index.php?action=browse&item=$key'
         title='$value[0]'>Add to Cart</a></li>";
-        //echo $key;
+
         //echo $value[1];
         //echo $value[0];
         //echo "<br>";
@@ -84,8 +85,8 @@ switch ($action) {
       $price = 0;
       $browseList2 = "<ul>";
       foreach ($sessionCart as $key => $value) {
-        $browseList2 .= "<li>" . $items[$value][0] . "<span>\$" . $items[$value][1] . "</span>
-        <a href='/cs313-php/web/shoppingCart/index.php?action=cart&item=" . $key ."'>Remove From Cart</a></li>";
+        $browseList2 .= "<li><span class='item'>" . $items[$value][0] . "</span><span class='price'>\$" . $items[$value][1] . "</span>
+        <a href='index.php?action=cart&item=" . $key ."'>Remove</a></li>";
         $price += $items[$value][1];
       }
 
@@ -149,7 +150,7 @@ switch ($action) {
     $price = 0;
     $browseList2 = "<ul>";
         foreach ($sessionCart as $key => $value) {
-          $browseList2 .= "<li>" . $items[$value][0] . "<span>\$" . $items[$value][1] . "</span></li>";
+          $browseList2 .= "<li><span class='item'>" . $items[$value][0] . "</span><span class='price'>\$" . $items[$value][1] . "</span></li>";
             $price += $items[$value][1];
         }
     $browseList2 .= "</ul>";

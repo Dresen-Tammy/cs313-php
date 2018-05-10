@@ -1,33 +1,33 @@
 <head>
   <title>Confirm</title>
-  <?php include '../template/head.php'?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/cart.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
 
     <header>
-      <div class="logo">
-        <div class=" bigCircle"></div>
-        <div class=" smallCircle"></div>
-        <div class="tinyCircle"></div>
-        <h1>Recyclery</h1>
-      </div>
+      <div class="center">
+      <img class="logo" src="images/recyclery.png" alt="recyclery logo">
+      <a  href="index.php?action=browse" class="button1">CONTINUE SHOPPING</a>
+    </div>
     </header>
     <main>
-      <h2>Confirmation</h2>
+      <div class="center">
+      <h1>Confirmation</h1>
       <p>Congratulations! You have purchased:</p>
       <?php
       if (isset($browseList2)) {
       echo $browseList2;
     }
-    echo "<p>Total Cost: $<span>$price</span></p>";
+    echo "<p class='total'>Total Cost: $<span>$price</span></p>";
     echo "<p>Your purchases will be sent to:</p>";
     echo "<p>$street<br>";
     echo "<p>$city, $state $zip</p>";
       ?>
-      </main>
+    </div>
+  </main>
 
-
-  </form>
 </body>
 </html>
