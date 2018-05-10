@@ -17,16 +17,16 @@ if(isset($_SESSION['cart'])) {
 
 // list of items for sale on browseItems page
 $items = array(
-  "RU" => array("Specialized Ruby Bike 52cm Teal", 1299.99, "images/ruby.png"),
-  "RO" => array("Specialized Roubaix Bike 61cm Mint", 3099.99, "images/roubaix.png" ),
-  "CH" => array("Trek Checkpoint ALR Bike 48cm Blue", 1789.99, "images/checkpoint.png"),
-  "PR" => array("Giant Propel Advanced Bike 59cm Blue", 3775.15, "images/giant.png" ),
-  "LA" => array("Lazer 02 Helmet Orange Sm", 89.96, "images/lazer.png" ),
-  "GI" => array("Giro Savant Helmet Red Lg", 49.97, "images/giro.png"),
-  "PI" => array("Pearl Izumi Cycling Kit Sm", 89.95, "images/pearl.png" ),
-  "CM"=> array("Sesame Street Cycling Jersey Md", 75.49, "images/cookie.png" ),
-  "SI" => array("Sidi Level Carbon Shoes Mens 8", 119.99, "images/sidi.png" ),
-  "BG" => array("Specialized Body Geometry Gel Gloves Lg", 35.59, "images/geometry.png" )
+  "RU" => array("Specialized Ruby Bike 52cm Teal", 1299.99, "images/ruby.png", "Specialized Ruby is a great bike that is specially designed for women."),
+  "RO" => array("Specialized Roubaix Bike 61cm Mint", 3099.99, "images/roubaix.png", "Designed for racing, the Roubaix has an agressive stance." ),
+  "CH" => array("Trek Checkpoint ALR Bike 48cm Blue", 1789.99, "images/checkpoint.png", "Treck's newest model, the Checkpoint, is priced to sell."),
+  "PR" => array("Giant Propel Advanced Bike 59cm Blue", 3775.15, "images/giant.png", "Gain a speed advantage with this premium bike." ),
+  "LA" => array("Lazer 02 Helmet Orange Sm", 89.96, "images/lazer.png", "Air vents keep your head cool while providing superior protection." ),
+  "GI" => array("Giro Savant Helmet Red Lg", 49.97, "images/giro.png", "At a lower price point, the Giro helmet still has excellent quality."),
+  "PI" => array("Pearl Izumi Cycling Kit Sm", 89.95, "images/pearl.png", "Ride in style and comfort with this singlet and jersey." ),
+  "CM"=> array("Sesame Street Cycling Jersey Md", 75.49, "images/cookie.png", "Fun and whimsical, but with all the technical features to keep you comfortable." ),
+  "SI" => array("Sidi Level Carbon Shoes Mens 8", 119.99, "images/sidi.png", "Carbon shoes provide lightweight comfort and superior pedaling." ),
+  "BG" => array("Specialized Body Geometry Gel Gloves Lg", 35.59, "images/geometry.png", "Gel cushions keep hands comfortable even on the longest rides." )
 );
 
 // get input on which page to display. If no input, display browse page.
@@ -56,10 +56,10 @@ switch ($action) {
       // create browse list for browseItem page
       $browseList = "<ul>";
       foreach ($items as $key => $value) {
-        $browseList .= "<li><span class='item'> $value[0] </span> <span class='price'>\$$value[1]</span>
-        <a href='index.php?action=browse&item=$key'
-        title='$value[0]'>Add to Cart</a></li>";
-
+        //$browseList .= "<li><span class='item'> $value[0] </span> <span class='price'>\$$value[1]</span>
+        //<a href='index.php?action=browse&item=$key'
+        //title='$value[0]'>Add to Cart</a></li>";
+        $browseList .= "<li><a href='index.php?action=item&item=$key' >$value[0]</a></li>";
         //echo $value[1];
         //echo $value[0];
         //echo "<br>";
@@ -99,6 +99,20 @@ switch ($action) {
       include 'view/viewCart.php';
       break;
 
+
+
+  case 'item':
+      if (isset($item)) {
+        $display = "<h1>" . $items[$item][0] . "</h1>";
+        $display .="<img class='detailimg' src='" . $items[$item][2] . "' alt='".$items[$item][0] . "'><br>";
+        $display .="<p>" . $items[$item][3] . "</p>";
+        $display .="<p>Price: $" . $items[$item][1] . "</p>";
+        $display .= "<a class='button1' href='index.php?action=browse&item=" . $item . "' title='" . $items[$item][0]. "'>Add to Cart</a></li>";
+      } else {
+        $error = "Sorry, information about this item is not available.";
+      }
+          include 'view/viewItem.php';
+          break;
 
 
 
