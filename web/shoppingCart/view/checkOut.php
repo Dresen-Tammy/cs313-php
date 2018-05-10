@@ -28,7 +28,7 @@ Clicking button will store item in session, return to browseItem page  -->
           echo "<p>Total Cost: $<span>$price</span></p>"
 
         ?>
-        <form method="post" action="/cs313-php/web/shoppingCart/index.php">
+        <form method="post" action="index.php">
           <fieldset>
           </legend class="error">* required field</legend><br>
           <?php if (isset($error)) {echo $error;} ?>
