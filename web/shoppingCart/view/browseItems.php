@@ -6,7 +6,7 @@ Clicking button will store item in session, return to browseItem page  -->
 <html lang="en-us">
   <head>
     <title>Browse</title>
-    <?php include 'template/head.php'?>
+    <?php include '../template/head.php'?>
 
 </head>
   <body>
@@ -18,12 +18,21 @@ Clicking button will store item in session, return to browseItem page  -->
           <div class="tinyCircle"></div>
           <h1>Recyclery</h1>
         </div>
-        <a  href="home.php" class="button1">CART</a>
+        <a  href="index.php?action=cart" class="button1">CART <span><?php if (isset($sessionCart)) {
+             echo count($sessionCart); }
+             else {
+               echo "0";}  ?></span></a>
+
       </header>
       <main>
+        <h2>Cycling Gear</h2>
         <?php
+        if (isset($browseList)) {
         echo $browseList;
+      }
+
         ?>
+        <a  href="index.php?action=cart" class="button1">Go to Cart</a>
         </main>
 
 
