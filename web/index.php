@@ -1,5 +1,6 @@
 <?php
 
-  phpinfo();
+include "home.php";
+
 
 ?>

@@ -14,8 +14,11 @@
 
     <main>
       <div>
-        <h2>More Info</h2>
-        <p>Coming Soon</h2>
+        <h2>Team Assignments</h2>
+        <ul>
+          <li><a href="team/week2/week2BS.html">Week 2</a></li>
+          <li><a href="team/week3/index.php">Week 3</a></li>
+        </ul>
       </div>
     </main>
     <?php include 'template/footer.php'?>
